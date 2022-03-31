@@ -1,0 +1,169 @@
+html{font-family: Helvetica;}
+
+h1{
+    text-align: center;
+    font-size: 40px  
+}
+
+.containerTittle{  
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.containerTittle img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerList{
+    display: flex;
+}
+
+.cardList{
+    width: 230px;
+     height: 290px;     
+     padding: 10px;
+     border-radius: 10px;
+     margin: 10px;   
+     box-shadow: 0 0 0 0 #ffffff;
+     transition: box-shadow 0.3s cubic-bezier(0.59, 0.09, 0.68, 1.04)  
+}
+
+.cardList:hover{
+    box-shadow: 5px 4px 8px 0px #998989;
+}
+
+.containerId{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.numberId{
+    line-height: 1;
+    text-align: center;
+    color: black;
+    position: relative;
+    font-size: 16px; 
+}
+
+.containerImgPokemon{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.containerImgPokemon img{
+
+    width: 100px;
+    height: 100px;
+}
+
+.previewInfo{
+display: flex;
+flex-grow: 1;
+flex-direction: column;
+
+}
+
+.namePokemon{
+    text-align: center;
+    line-height: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.containerTypes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.type{
+    width: 65px;
+    height: 19px;
+    margin-right: 10px;   
+    padding: 2px;
+    text-align: center;
+    border-radius: 14px;
+    background-color: bisque;
+    margin-bottom:5px ;
+    box-shadow: 0px 0px 10px 0px #99898994
+    
+}
+
+.type p {
+    margin-top: 9px;
+    line-height: 0;
+    font-weight: bold;
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.infoHeigntWeight{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.infoHeigntWeight div:first-child{
+    margin: 5px;
+    line-height: 0;
+
+}
+
+/* types Pokemon*/
+
+/* .grass{background-color: #80ec2891;} */
+.grass{background: radial-gradient(#fff, #80ec2891);}
+
+.fire{background: radial-gradient(#fff, #ed252594);}
+
+.bug{background: radial-gradient(#fff, #6cb52acc);}
+
+.water{background: radial-gradient(#fff, #84cabf94);}
+
+.normal{background: radial-gradient(#fff, #ef9963d4);};
+
+.electric{background: radial-gradient(#fff, #fffbd9b8);}
+
+.poison{background: radial-gradient(#fff, #9384c9b0);}
+
+.ground{background: radial-gradient(#fff, #d7883bbf);}
+
+.psychic{background: radial-gradient(#fff, #b12961a3);}
+
+.fighting{background: radial-gradient(#fff, #ff8923b8);}
+
+.fairy{background: radial-gradient(#fff, #e9afb67d);}
+
+.rock{background: radial-gradient(#fff, #88878070);}
+
+.ghost{background: radial-gradient(#fff, #51308eb8);}
+
+.ice{background: radial-gradient(#fff, #aad8f3bf);}
+
+.dragon{background: radial-gradient(#fff, #577ec7bf);}
+
+.electric{background: radial-gradient(#fff, #f0d400b8);}
+
+.flying{background: radial-gradient(#fff, #ededeec2);}
+
+.type.undefined,.undefined {display: none;}
+
+.icon{
+    width: 20px;
+    height: 21px;
+    margin: 0 8px 0 8px;
+}
