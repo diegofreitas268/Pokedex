@@ -1,42 +1,25 @@
 const getPokemons = () => {
 
     const promises = [];
-    const promisess = [];
     for (let i = 1; i <= 150; i++) {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         promises.push(fetch(url).then((res) => res.json()));
-        const evoUrl = `https://pokeapi.co/api/v2/evolution-chain/${i}/`;
-        promisess.push(fetch(evoUrl).then((res) => res.json()));
+
     }
     Promise.all(promises).then((datas) => {
-        // console.log(datas)
-        // onsole.log(ev)
 
         const pokeData = datas.map((data) => ({
-            name: data.name,       
-            // type: data.types.map((type) => type.type.name).join(',').split(','),
+            name: data.name,
+            type: data.types.map((type) => type.type.name).join(',').split(','),
             id: data.id,
             height: (data.height * 0.10).toFixed(2),
-            weight: (data.weight *0.10).toFixed(2),    
-            // evelotion:  ev.map((type) => type.type.name).join(',').split(','),         
+            weight: (data.weight * 0.10).toFixed(2),
         }));
 
-        console.log(pokeData)
         construtorList(pokeData)
     });
-    Promise.all(promisess).then((datas) => {
-        console.log(datas)
-        
-
-        const pokeData = datas.map((data) => ({
-           
-           evelotion:  ev.map((evolution) => chain.evolves_to.name.species).join(',').split(','),         
-        }));
-
-        console.log(pokeData)
-        // construtorList(pokeData)
-    });
 };
+
 
 const construtorList = (pokeData) => {
 
@@ -60,7 +43,17 @@ const construtorList = (pokeData) => {
                 <p><b>${pokeInfo.name}</b></p>
             </div>
 
-            
+            <div class="containerTypes">
+            <img src="img/${pokeInfo.type[0]}.png" class="icon">
+            <div class="type ${pokeInfo.type[0]}">               
+                <p>${pokeInfo.type[0]}</p>
+            </div>
+
+            <img src="img/${pokeInfo.type[1]}.png" class="icon ${pokeInfo.type[1]}" style="background: transparent;">
+            <div class="type ${pokeInfo.type[1]}">
+                <p>${pokeInfo.type[1]}</p>
+            </div>
+         </div>
 
             <div class='containerInfo'>
                 <div class="infoHeigntWeight">
